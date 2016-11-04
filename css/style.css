@@ -1,0 +1,32 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+/*.hero {
+  background: "img/hero.jpg";
+  background-repeat: no-repeat;
+  height:100vh;
+  background-size: cover;
+}*/
+.placeholder {
+    width: 500px;
+    height: inherit;
+    /*border:1px solid black;*/
+}
+.graphs {
+  height:400px;
+}
+.setHeight {
+  width: 500px;
+  height: 400px;
+}

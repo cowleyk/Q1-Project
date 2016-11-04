@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Fantasy Graphs</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<!-- _____________________________________________________________ -->
+<body>
+  <nav class="light-blue darken-3" role="navigation">
+    <div class="nav-wrapper"><a id="logo-container" href="./index.html" class="brand-logo">Fantasy Graphs</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="./order.html">Order Delivery</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="order.html">Order Delivery</a></li>
+      </ul>
+      <a href="order.html" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- _____________________________________________________________ -->
+  <!-- <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Starter Template</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+      </div>
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div> -->
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="img/nfl.jpg"></div>
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="section white">
+         <!--   Icon Section   -->
+         <div class="row" id="main">
+           <div class="input-field col s3">
+             <select>
+               <option class="numOfPlayers" value="1">1</option>
+               <option class="numOfPlayers" value="2">2</option>
+               <option class="numOfPlayers" value="3">3</option>
+               <option class="numOfPlayers" value="4">4</option>
+             </select>
+             <label>How Many Players?</label>
+
+              <div id="numSelector">
+             </div>
+           </div>
+
+<div class="input-field col s3">
+<select>
+<option class="rangeStart" value="" disabled selected>Range Start</option>
+<option class="rangeStart" value="1">1</option>
+<option class="rangeStart" value="2">2</option>
+<option class="rangeStart" value="3">3</option>
+<option class="rangeStart" value="4">4</option>
+<option class="rangeStart" value="5">5</option>
+<option class="rangeStart" value="6">6</option>
+<option class="rangeStart" value="7">7</option>
+<option class="rangeStart" value="8">8</option>
+<option class="rangeStart" value="9">9</option>
+<option class="rangeStart" value="10">10</option>
+<option class="rangeStart" value="11">11</option>
+<option class="rangeStart" value="12">12</option>
+<option class="rangeStart" value="13">13</option>
+<option class="rangeStart" value="14">14</option>
+<option class="rangeStart" value="15">15</option>
+<option class="rangeStart" value="16">16</option>
+</select>
+<label>Week Range</label>
+<select>
+<option class="rangeEnd" value="" disabled selected>Range End</option>
+<option class="rangeEnd" value="1">1</option>
+<option class="rangeEnd" value="2">2</option>
+<option class="rangeEnd" value="3">3</option>
+<option class="rangeEnd" value="4">4</option>
+<option class="rangeEnd" value="5">5</option>
+<option class="rangeEnd" value="6">6</option>
+<option class="rangeEnd" value="7">7</option>
+<option class="rangeEnd" value="8">8</option>
+<option class="rangeEnd" value="9">9</option>
+<option class="rangeEnd" value="10">10</option>
+<option class="rangeEnd" value="11">11</option>
+<option class="rangeEnd" value="12">12</option>
+<option class="rangeEnd" value="13">13</option>
+<option class="rangeEnd" value="14">14</option>
+<option class="rangeEnd" value="15">15</option>
+<option class="rangeEnd" value="16">16</option>
+</select>
+</div>
+
+<div class="input-field col s3">
+<select>
+<option class="seasonSelect" value="2016">2016</option>
+<option class="seasonSelect" value="2015">2015</option>
+<option class="seasonSelect" value="2014">2014</option>
+<option class="seasonSelect" value="2013">2013</option>
+</select>
+<label>Which Season?</label>
+</div>
+
+<div class="input-field col s3">
+<select multiple>
+<option class="specific"  value="Receptions">Receptions</option>
+<option class="specific" value="ReceivingYards">Receiving Yards</option>
+<option class="specific" value="ReceivingTouchdowns">Receiving Touchdowns</option>
+<option class="specific" value="RushingAttempts">Rushing Attempts</option>
+<option class="specific" value="RushingYards">Rushing Yards</option>
+<option class="specific" value="RushingTouchdowns">Rushing Touchdowns</option>
+<option class="specific" value="PassingAttempts">Passing Attempts</option>
+<option class="specific" value="PassingCompletions">Passing Completions</option>
+<option class="specific" value="PassingYards">Passing Yards</option>
+<option class="specific" value="PassingTouchdowns">Passing Touchdowns</option>
+</select>
+<label>Stats to Plot</label>
+</div>
+
+
+               <!-- <input class="numOfPlayers" type="radio" name="secondRad" value="1">1
+              <input class="numOfPlayers" type="radio" name="secondRad" value="2">2
+              <input class="numOfPlayers" type="radio" name="secondRad" value="3">3
+              <input class="numOfPlayers" type="radio" name="secondRad" value="4">4 -->
+
+           </div>
+           <div id="playerForm">
+             <div class="btn waves-effect waves-light card-action">
+               <a href="#" class="clicker" style="color:white">Next</a>
+             </div>
+           </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="btn waves-effect waves-light card-action">
+      <a href="#" id="submit" style="color:white">Submit</a>
+    </div>
+    <br>
+    <br>
+    <div class="btn waves-effect waves-light card-action">
+      <a href="#" id="graph" style="color:white">Graph</a>
+    </div>
+  </div>
+  <br><br>
+  <div id="graphs">
+
+  </div>
+  <br><br>
+  <!-- _____________________________________________________________ -->
+
+
+  <footer class="page-footer blue darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Fantasy Graphs</h5>
+          <!-- <p class="grey-text text-lighten-4">Fine Dining, Delivered.</p> -->
+
+
+        </div>
+        <!-- <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div> -->
+        <div class="col l3 s12 push-l2">
+          <!-- <h5 class="white-text">Connect</h5> -->
+          <!-- <ul>
+            <li><a class="white-text" href="./index.html">Home</a></li>
+            <li><a class="white-text" href="./order.html">Order Delivery</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright dark-blue darken-7">
+      <div class="container">
+      &copy; 2016 Kevin Cowley
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <!-- <script src="js/init.js"></script> -->
+  <script type="text/javascript"src="http://cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js"></script>
+  <script type="text/javascript" src="./flot/jquery.flot.js"></script>
+  <script type="text/javascript" src="./flot/jquery.flot.time.js"></script>
+  <script type="text/javascript" src="./flot/jquery.flot.fillbetween.js"></script>
+  <script type="text/javascript" src="./flot/jquery.flot.canvas.js"></script>
+  <script type="text/javascript" src="./flot/jquery.flot.symbol.js"></script>
+
+  <script src="./js/indexnfl.js" defer></script>
+  <script src="./js/apiqueryfxn.js" defer></script>
+
+
+  </body>
+</html>
