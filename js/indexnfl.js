@@ -27,7 +27,7 @@ $(document).ready(function() {
   getplayerIDObj();
 
 //change to submit button (make multi submits)
-$('.clicker').on('click', function(){
+$('.numOfPlayers').on('click', function(){
   firstSelect = $('.numOfPlayers:selected');
   // console.log('picked first drop down!', firstSelect.val());
   var numPlayers = parseInt(firstSelect.val());
@@ -60,10 +60,10 @@ $('.clicker').on('click', function(){
 $('#submit').on('click', function(){
   var rangeStartSelect = $('.rangeStart:selected');
   console.log('picked week1 drop down!', rangeStartSelect.val());
-  startVal = rangeStartSelect.val();
+  startVal = parseInt(rangeStartSelect.val());
   var rangeEndSelect = $('.rangeEnd:selected');
   console.log('picked week2 drop down!', rangeEndSelect.val());
-  endVal = rangeEndSelect.val()+1;
+  endVal = parseInt(rangeEndSelect.val())+1;
   var seasonSelect = $('.seasonSelect:selected').val();
   params.season = seasonSelect;
   console.log(params.season);
@@ -100,6 +100,7 @@ $('#submit').on('click', function(){
   for(var j=0;j<playerIDArr.length;j++){
     params.playerID = playerIDArr[j];
     for(var i=startVal;i<endVal;i++){
+      console.log('week in loop', i);
       params.week = i;
       getWeeklyStats(params);
       // console.log(params);
@@ -128,7 +129,7 @@ $('#graph').on('click', function(){
 
   for(var j=0;j<thirdStats.length;j++){
 
-    $('#graphs').append('<div id="legendHolder"></div><div id="placeholder'+thirdStats[j]+'" style="width:500px; height:300px;"></div>');
+    $('#graphs').append('<div id="legendHolder"></div><div><b>'+thirdStats[j]+'</b><div id="placeholder'+thirdStats[j]+'" style="width:500px; height:300px;"></div></div>');
 
     for(var i=0;i<playerNameArr.length;i++){
       var dataSort = queryStats[playerNameArr[i]][thirdStats[j]];
@@ -160,7 +161,7 @@ $('#graph').on('click', function(){
 
 
       // data1[i] = data1obj;
-      console.log('data1[i]: ', data1[i]);
+      // console.log('data1[i]: ', data1[i]);
     } //close forplayerNameArr) loop
 
 
@@ -168,7 +169,7 @@ $('#graph').on('click', function(){
   //     var data1 = [ { label: "label 1", data: d1, points: { symbol: "triangle", fillColor: "#058DC7" }, color: "#058DC7" },
   //     { label: "label 2", data: d2, points: { symbol: "square", fillColor: "#50B432" }, color: "#50B432" }
   // ];
-  console.log('data1: ', data1);
+  // console.log('data1: ', data1);
 
     $.plot($('#placeholder'+thirdStats[j]), data1, {
             xaxis: {
@@ -211,10 +212,11 @@ $('#graph').on('click', function(){
 // ___________START:RESET BUTTON___________________
 $('#reset').on('click', function(){
   $('#graphs').html('');
-  var thirdStats = [];
-  var playerObjID = {};
-  var queryStats = {};
-  var params = {
+  $('#playerForm').html('<div class="btn waves-effect waves-light card-action"><a href="#" class="clicker" style="color:white">Next</a></div>')
+  thirdStats = [];
+  playerObjID = {};
+  queryStats = {};
+  params = {
       //Request parameters
       statType: 'PlayerGameStatsByPlayerID',
       //season:
@@ -223,9 +225,9 @@ $('#reset').on('click', function(){
       //team
       //week
   };
-  var playerNameArr = [];
-  var playerIDArr = [];
-  var masterStatsArr = [];
+  playerNameArr = [];
+  playerIDArr = [];
+  masterStatsArr = [];
 
 
 }); //close reset.click

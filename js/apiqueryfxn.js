@@ -39,7 +39,7 @@ function getWeeklyStats(obj){
           var playerNameArrPlaceholder = playerNameArr[j]
           for(var i=0; i<thirdStats.length; i++){
             var thirdStatsPlaceholder = thirdStats[i];
-            console.log('playerName for ajax:', playerNameArrPlaceholder);
+            // console.log('playerName for ajax:', playerNameArrPlaceholder);
             if(data.Name === playerNameArrPlaceholder){
               queryStats[playerNameArrPlaceholder][thirdStatsPlaceholder].push([data['Week'],data[thirdStatsPlaceholder]]);
             }
@@ -58,7 +58,7 @@ function getWeeklyStats(obj){
 
 
     function setHeader(xhr){
-      xhr.setRequestHeader("Ocp-Apim-Subscription-Key","c78d99ac9c06412daccae7a17bbe1c24");
+      xhr.setRequestHeader("Ocp-Apim-Subscription-Key","a2f7e42648ea4c67b18eb8cb195d3593");
     }
 
     // $weeklyStats.done(function(data) {
@@ -90,7 +90,7 @@ function getWeeklyStats(obj){
       //close stats = ajax
 
       function setHeader(xhr){
-        xhr.setRequestHeader("Ocp-Apim-Subscription-Key","c78d99ac9c06412daccae7a17bbe1c24");
+        xhr.setRequestHeader("Ocp-Apim-Subscription-Key","a2f7e42648ea4c67b18eb8cb195d3593");
       }
 
       $playersAll.done(function(data) {
